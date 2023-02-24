@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+
+  <link rel="stylesheet" href="9.css">
+</head>
+<body>
+  <template id="bookCard">
+    <div class="bookTempCard">
+      <div id="bookCardTitle">
+        Cat
+      </div>
+      <div id="bookCardAuthor">
+        Anson
+      </div>
+      <div id="bookCardPages">
+        69
+      </div>
+      <div id="bookCardRead">
+        This book is Read.
+      </div>
+      <button id="bookCardRemove" onclick=removeBookFromLibrary(this.parentNode)>
+        Remove Book
+      </button>
+      <div style="display: none" id="bookId"></div>
+    </div>
+  </template>
+
+  <h1>Simple Book Collection</h1>
+  <p><strong>Add your book by filling in the detail and click Submit button!</strong></p>
+
+  <div class="Header">
+    <form class="bookForm">
+      <div class="bookNameContainer">
+        <label for="bookName">Book Name:</label>
+        <input type="text" name="bookName" id="bookName" required>
+      </div>
+      <div class="bookAuthorContainer">
+        <label for="bookAuthor">Book Author:</label>
+        <input type="text" name="bookAuthor" id="bookAuthor" required>
+      </div>
+      <div class="bookPagesContainer">
+        <label for="bookPages">Book Pages:</label>
+        <input type="number" name="bookPages" id="bookPages" required>
+      </div>
+  
+      <div class="bookReadContainer">
+        <label for="bookRead">Is the book read?</label>
+        <input type="checkbox" name="bookRead" id="bookRead">
+      </div>
+  
+      <button type="submit" id="submitBtn" class="submit" onclick="addBookToLibrary()">Submit</button>
+    </form>
+    
+  </div>
+
+  <div class="content">
+
+
+  </div>
+</body>
+</html>
+
+<script src="9.js"></script>
